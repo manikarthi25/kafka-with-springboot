@@ -1,6 +1,6 @@
 # kafka-with-springboot
 # Setting Up Kafka
-#Mac
+# Mac
 Make sure you are navigated inside the bin directory.
 
 Start Zookeeper and Kafka Broker
@@ -36,7 +36,7 @@ With Key
 With Consumer Group
 ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test-topic --group <group-name>
   
-#Windows
+# Windows
 Make sure you are inside the bin/windows directory.
 
 Start Zookeeper and Kafka Broker
@@ -70,7 +70,7 @@ kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic 
 Setting Up Multiple Kafka Brokers
 The first step is to add a new server.properties.
 
-#We need to modify three properties to start up a multi broker set up.
+# We need to modify three properties to start up a multi broker set up.
 
 broker.id=<unique-broker-d>
 listeners=PLAINTEXT://localhost:<unique-port>
@@ -83,14 +83,14 @@ listeners=PLAINTEXT://localhost:9093
 log.dirs=/tmp/kafka-logs-1
 auto.create.topics.enable=false
 
-Starting up the new Broker
+# Starting up the new Broker
 Provide the new server.properties thats added.
 ./kafka-server-start.sh ../config/server-1.properties
 ./kafka-server-start.sh ../config/server-2.properties
 
-#Advanced Kafka CLI operations:
+# Advanced Kafka CLI operations:
 
-#Mac
+# Mac
 
 List the topics in a cluster
 ./kafka-topics.sh --zookeeper localhost:2181 --list
@@ -120,7 +120,7 @@ Viewing the Commit Log
 Setting the Minimum Insync Replica
 ./kafka-configs.sh --alter --zookeeper localhost:2181 --entity-type topics --entity-name test-topic --add-config min.insync.replicas=2
 
-#Windows
+# Windows
 Make sure you are inside the bin/windows directory.
 
 List the topics in a cluster
