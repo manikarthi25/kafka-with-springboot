@@ -67,10 +67,10 @@ kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic 
 With Consumer Group
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --group <group-name>
   
-Setting Up Multiple Kafka Brokers
+# Setting Up Multiple Kafka Brokers
 The first step is to add a new server.properties.
 
-# We need to modify three properties to start up a multi broker set up.
+We need to modify three properties to start up a multi broker set up.
 
 broker.id=<unique-broker-d>
 listeners=PLAINTEXT://localhost:<unique-port>
