@@ -98,7 +98,6 @@ public class LibraryEventProducer {
 			@Override
 			public void onFailure(Throwable ex) {
 				handleFailure(key, value, ex);
-
 			}
 
 			@Override
