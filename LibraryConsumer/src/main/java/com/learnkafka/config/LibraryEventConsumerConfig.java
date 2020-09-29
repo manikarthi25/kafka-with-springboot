@@ -9,7 +9,7 @@ import org.springframework.kafka.core.ConsumerFactory;
 
 @Configuration
 @EnableKafka
-public class LibraryConsumerEventConfig {
+public class LibraryEventConsumerConfig {
 
 	@Bean
 	ConcurrentKafkaListenerContainerFactory<?, ?> kafkaListenerContainerFactor(
@@ -18,7 +18,7 @@ public class LibraryConsumerEventConfig {
 		ConcurrentKafkaListenerContainerFactory<Object, Object> listenerFactory = new ConcurrentKafkaListenerContainerFactory<>();
 		configurer.configure(listenerFactory, consumerFactory);
 		listenerFactory.setConcurrency(3);
-		//listenerFactory.getContainerProperties().setAckMode(ContainerProperties.AckMode.MANUAL);
+		// listenerFactory.getContainerProperties().setAckMode(ContainerProperties.AckMode.MANUAL);
 		return listenerFactory;
 	}
 
